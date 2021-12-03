@@ -20,23 +20,23 @@ public class CrudMascotas extends javax.swing.JFrame {
      */
     public CrudMascotas() {
         initComponents();
-        mostrarDatos();
+        actualizarLista();
     }
     
-    MascotaController control2 = new MascotaController();
-        List<Mascota> lista = control2.listarMascotas();
-    
-    public void mostrarDatos(){
-        DefaultListModel datos = new DefaultListModel();
-        for(int i = 0; i < lista.size(); i++){
-            Mascota iterador = lista.get(i);
-            datos.addElement(
-                iterador.getNum_cliente()+ " - " + iterador.getNombre_perro() + " - " + iterador.getRaza() + " - " +
-                iterador.getColor() + " - " + iterador.getAlergico() + " - " + iterador.getAtencion_especial() +
-                " - " + iterador.getObservaciones() + " - " + iterador.getNombre_duenio() + " - " + iterador.getCelular_duenio()
-            );
-        }
-    }
+//    MascotaController control2 = new MascotaController();
+//        List<Mascota> lista = control2.listarMascotas();
+//    
+//    private void mostrarDatos(){
+//        DefaultListModel datos = new DefaultListModel();
+//        for(int i = 0; i < lista.size(); i++){
+//            Mascota iterador = lista.get(i);
+//            datos.addElement(
+//                iterador.getNum_cliente()+ " - " + iterador.getNombre_perro() + " - " + iterador.getRaza() + " - " +
+//                iterador.getColor() + " - " + iterador.getAlergico() + " - " + iterador.getAtencion_especial() +
+//                " - " + iterador.getObservaciones() + " - " + iterador.getNombre_duenio() + " - " + iterador.getCelular_duenio()
+//            );
+//        }
+//    }
     
     public void actualizarLista(){
         MascotaController control3 = new MascotaController();
